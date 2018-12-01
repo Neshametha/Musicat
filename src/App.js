@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Button } from 'reactstrap';
+
 
 class App extends Component {
   render() {
@@ -17,7 +19,14 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+                  <div>
+        <Button outline color="primary">primary</Button>{' '}
+        <Button outline color="secondary">secondary</Button>{' '}
+        <Button outline color="success">success</Button>{' '}
+        <Button outline color="info">info</Button>{' '}
+        <Button outline color="warning">warning</Button>{' '}
+        <Button outline color="danger">danger</Button>
+      </div>
           </a>
         </header>
       </div>
