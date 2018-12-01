@@ -1,0 +1,7 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=mlh2019uhacks20ad01;AccountKey=80mXjB4USaBP1NtUPuFNDRziY7/br+JyJ3YJagXke0XEH/apj67xTomX+LvsVUWK8hdjz1TP+AihoNxdb7Xjpg==",
+    "FUNCTIONS_WORKER_RUNTIME": "node"
+  }
+}
