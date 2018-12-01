@@ -3,21 +3,13 @@ var azure  =  require('azure-storage');
 
 module.exports = function (context, myBlob) {
 
-context.log("Analyzing uploaded image '" + context.bindingData.name + "' for adult content...");
+context.log("Analyzing uploaded image " + context.bindingData.name + " for human emotions...");
 var options = getAnalysisOptions(myBlob, process.env.SubscriptionKey, process.env.FaceEndpoint);
 analyzeAndProcessImage(context, options);
 
 function getAnalysisOptions(image, subscriptionKey, endpoint) {
-    // Request parameters.
-    var params = {
-        "returnFaceId": "true",
-        "returnFaceLandmarks": "false",
-        "returnFaceAttributes":
-            "emotion"
-    };
-    
     return  {
-        uri:endpoint + "/detect?" + $.param(params),
+        uri:endpoint + "/detect?returnFaceAttributes=emotion",
         method: 'POST',
         body: image,
         headers: {
@@ -32,16 +24,19 @@ function analyzeAndProcessImage(context, options) {
     .then((response) => {
 
         response = JSON.parse(response);
+        emotions = response[0]["faceAttributes"].emotion;
 
-        context.log(response);
-
-        //context.log("Is Adult: ", response.adult.isAdultContent);
-        //context.log("Adult Score: ", response.adult.adultScore);
-        //context.log("Is Racy: " + response.adult.isRacyContent);
-        //context.log("Racy Score: " + response.adult.racyScore);
-
+        context.log("Anger: "+emotions.anger);
+        context.log("Contempt: "+emotions.contempt);
+        context.log("Disgust: "+emotions.disgust);
+        context.log("Fear: "+emotions.fear);
+        context.log("Happiness: "+emotions.happiness);
+        context.log("Neutral: "+emotions.neutral);
+        context.log("Sadness: "+emotions.sadness);
+        context.log("Surprise: "+emotions.surprise);
+        
         var fileName = context.bindingData.name;
-        var targetContainer = 'processed';
+        var targetContainer = "processed";
         var blobService = azure.createBlobService(process.env.AzureWebJobsStorage);
 
         blobService.startCopyBlob(getStoragePath("uploaded", fileName), targetContainer, fileName, function (error, s, r) {
@@ -51,11 +46,14 @@ function analyzeAndProcessImage(context, options) {
 
             blobService.setBlobMetadata(targetContainer, fileName, 
             {
-                //"isAdultContent" : response.adult.isAdultContent,
-                //"adultScore" : (response.adult.adultScore * 100).toFixed(0) + "%",
-                //"isRacyContent" : response.adult.isRacyContent,
-                //"racyScore" : (response.adult.racyScore * 100).toFixed(0) + "%"
-                data : response
+                "anger" : emotions.anger,
+                "contempt" : emotions.contempt,
+                "disgust" : emotions.disgust,
+                "fear" : emotions.fear,
+                "happiness" : emotions.happiness,
+                "neutral" : emotions.neutral,
+                "sadness" : emotions.sadness,
+                "surprise" : emotions.surprise
             }, 
 
             function(error,s,r) {
