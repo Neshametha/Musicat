@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "prop-types": "^15.6.2",
     "react": "latest",
-    "react-dom": "latest",
     "react-bootstrap": "latest",
+    "react-dom": "latest",
     "react-router-dom": "latest"
   },
   "scripts": {
