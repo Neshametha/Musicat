@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, { Button } from 'reactstrap';
 import logo from './logo.svg';
 import './App.css';
-import { Button } from 'reactstrap';
 
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
