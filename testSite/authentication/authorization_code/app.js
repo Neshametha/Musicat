@@ -202,7 +202,7 @@ function getRecommendations(access_token, emotion) {
   console.log("Mode: "+targetMode)
   var populateOptions = {
     url: "https://api.spotify.com/v1/recommendations?"
-    +"seed_artists=5INjqkS1o8h1imAzPqGZBb&"
+    +"seed_artists=60d24wfXkVzDSfLS6hyCjZ&"
     +"target_valence="+targetValence+"&target_mode="+targetMode
     +"&target_energy="+targetEnergy+"&min_popularity=20&market=US",
     headers: { 
@@ -253,7 +253,7 @@ function makePlaylist(access_token, user_id) {
   request.post(playlistOptions, function(error, res, body) {
     body = JSON.parse(body);
     savePlaylistId(body.id)
-    getRecommendations(access_token, 'happiness');
+    getRecommendations(access_token, 'angry');
   })
 }
 
