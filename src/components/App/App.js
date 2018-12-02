@@ -7,6 +7,7 @@ import Banner from '../Banner/Banner';
 import Footer from '../Footer/Footer';
 import Nav from '../Nav/Nav';
 import About from '../About/About';
+import Authentication from '../authentication/authentication';
 
 import './app.css';
 
@@ -14,6 +15,7 @@ const MainApp = () => (
   <div className='app'>
     <Nav />
     <div className='bg1'>
+    <Authentication />
     <Banner />
     <Camera />
     <About />

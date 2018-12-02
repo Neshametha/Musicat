@@ -1,18 +1,14 @@
-<!doctype html>
-
 <html>
     <!DOCTYPE html>
     <html lang="en">
-    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link href="https://fonts.googleapis.com/css?family=Kanit:400,600" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
             crossorigin="anonymous">
-            <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
             <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -21,7 +17,7 @@
             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
         <title>Musicat</title>
     </head>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
     <style type="text/css">
       #login, #loggedin {
         display: none;
@@ -32,21 +28,71 @@
         white-space: nowrap;
         width: 500px;
       }
+
+      body, html {
+        background: #FCF5A4;
+        color: #231f20;
+        font-family: 'Nunito', sans-serif;
+        grid-area: banner;
+        display: flex;
+        text-align: center;
+        text-decoration: none;
+      }
+
+  h1 {
+    font-size: 60pt;
+    margin: 0;
+    font-family: 'Black Han Sans', sans-serif;
+    text-decoration: none;
+  }
+  
+  .btn, .btn-primary {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 17px;
+    background-color: #FCF5A4;
+    border-radius: 5px;
+    border-color: rgba(0,0,0,.5);
+    margin-left: 10px;
+    color: #ba885f;
+    display: inline-block;
+    border: none;
+    margin-right: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    height:50px;
+    font-size: 20px;
+    box-shadow: 4px 4px #ba885f;
+    text-decoration: none;
+  }
+
+  
+  .btn:hover, .btn-primary:hover{
+    transition: 0.7s ease;
+    background-color: #ba885f;
+    color: #FCF5A4;
+    text-decoration: none;
+  }
+  
+  .banner-buttons {
+    text-align: center;
+    text-decoration: none;
+  }
     </style>
   </head>
 
   <body>
-    <div class="container">
+    <div class="container" text-align="center">
       <div id="login">
         <h1>Welcome to Musicat! Please login with your Spotify Credentials.</h1>
-        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+          <img src="../src/assets/mikemura colored.png">
+        <br><a href="/login" class="btn btn-primary">Log in with Spotify</a>
       </div>
       <div id="loggedin">
         <div id="user-profile">
         </div>
         <div id="oauth">
         </div>
-        <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+        <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token.</button>
       </div>
     </div>
 
@@ -156,5 +202,6 @@
         }
       })();
     </script>
+    <div id="root"></div>
   </body>
 </html>
