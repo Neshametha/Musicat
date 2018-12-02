@@ -1,6 +1,7 @@
 html,body {
 	margin: 0;
-	padding: 0;
+  padding: 0;
+  text-decoration:none;
 }
 
 .app {
@@ -23,7 +24,7 @@ html,body {
 
 .bg1 {
   grid-row-start: 2;
-  background: url('../../assets/Miami_Beach_Gradient_Swoosh.png');
+  background: #FFFFFF;
   background-size: cover;
   padding-bottom: 230px;
   max-width: 100vw;
