@@ -1,0 +1,74 @@
+.dropdown-container {
+  display: flex;
+  background-color: #ff1493;
+  border-radius: 15px;
+}
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-width:10vw;
+  height: 100vh;
+  background-color: #ff1493;;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+}
+
+.dropdown-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  
+}
+
+.dropdown-items a {
+  width: 100vw;
+  text-align: center;
+  color: white;
+  margin-bottom: 15px;
+
+    background-color: var(--blue-primary);
+}
+
+.dropdown-container .burger-button{
+  background-color:  #ff1493;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.dropdown .logo {
+  margin: 50px 0 auto 0;
+  background: url('/src/assets/mikemura lines brown reverse.png') no-repeat;
+  background-size: 50px;
+  width: 60px;
+  height: 60px;
+}
+
+.dropdown-items a {
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-items a:hover {
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+}
+/*added hover effect, made black highlight appear upon hover
+navbar area might squish a bit, needs fixing here*/
+.burger-button {
+  margin-right: auto;
+}
+
+.menu-close-button {
+  margin: auto 0 50px 0;
+  
+  color:black;
+}

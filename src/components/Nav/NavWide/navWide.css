@@ -1,0 +1,55 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 10px;
+  padding-right: 150px;
+  /*use padding here to make space for MLH logo*/
+}
+
+.logo {
+  margin-right: auto;
+  background: url('/src/assets/mikemura lines brown reverse.png') no-repeat;
+  margin-top: 2px;
+  background-size: 50px;
+  width: 60px;
+}
+
+.navbar-items {
+  display: flex;
+  transition: 0.3s ease;
+  font-family: 'Kanit', sans-serif;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar-item {
+  /*border: 1px solid black;*/
+  width: 5em;
+  text-align: center;
+  font-size: 14pt;
+  line-height: 3.2em;
+  font-family: 'Kanit', sans-serif;
+  
+}
+
+.navbar-item a {
+  color: white;
+}
+
+.navbar-item:hover{
+  background-color:  var(--blue-primary);
+  transition: 0.3s ease;
+}
+
+.mlh{
+  display:block;
+  max-width:100px;
+  min-width:60px;
+  position:fixed;
+  right:50px;
+  top:0;
+  width:10%;
+  z-index:10000; 
+}

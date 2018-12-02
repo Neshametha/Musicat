@@ -1,0 +1,77 @@
+body, html {
+  font-family: 'Nunito', sans-serif;
+}
+
+.about-container {
+  grid-area: about;
+  display: grid;
+  width: 100vw;
+	grid-template-columns: var(--container-columns-small);
+  padding: 15em 0 15em 0;
+  margin-top: 50px;
+}
+
+.about-content {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-content h1 {
+  text-align: left;
+  font-size: 40pt;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.about-content p {
+  font-size: 16pt;
+  
+}
+
+.about-image {
+  min-width: 340px; /*TODO: image resize on small screens, should start at 395px and fall to this*/
+  height: 340px;
+  background: url('../../assets/mikemura colored.png') no-repeat;
+  background-size: contain;
+  margin: 0 auto 3em auto;
+
+}
+
+.about-text {
+  width: 100%;
+  color: white;
+  text-align: left;
+}
+
+@media only screen and (min-width: 840px) {
+  .about-container {
+    grid-template-columns: var(--container-columns-medium);
+  }
+  .about-content {
+    grid-column: 3 / 4;
+    flex-direction: row;
+  }
+  .about-image {
+    min-width: 395px;
+    height: 395px;
+    margin: 0 auto 0 auto;
+  }
+  .about-text {
+    width: 380px;
+    margin-left: auto;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+	.about-container {
+		grid-template-columns: var(--container-columns-large);
+	}
+  .about-text {
+    min-width: 500px;
+  }
+  .about-image {
+    min-width: 450px;
+    height: 450px;
+  }
+}
