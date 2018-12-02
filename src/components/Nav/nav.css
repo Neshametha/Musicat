@@ -1,0 +1,36 @@
+html,body{
+  /* height: 100%;
+    margin: 0px;
+    padding: 0px; */
+    overflow-x: hidden;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+nav {
+  grid-area: nav;
+  z-index: 100;
+  background-color: #FCF5A4;
+  height: 4em;
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+nav li {
+  cursor: pointer;
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f37de3;
+  font-family: 'Black Han Sans', sans-serif;
+}
