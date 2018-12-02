@@ -5,7 +5,8 @@ module.exports = function (context, myBlob) {
 
 context.log("Analyzing uploaded image " + context.bindingData.name + " for human emotions...");
 var options = getAnalysisOptions(myBlob, process.env.SubscriptionKey, process.env.FaceEndpoint);
-analyzeAndProcessImage(context, options);
+var emotions = analyzeAndProcessImage(context, options);
+getFittingSongs(emotions);
 
 function getAnalysisOptions(image, subscriptionKey, endpoint) {
     return  {
@@ -18,6 +19,10 @@ function getAnalysisOptions(image, subscriptionKey, endpoint) {
         }
     }
 };
+
+function getFittingSongs(emotions) {
+    var 
+}
 
 function analyzeAndProcessImage(context, options) {
     request(options)
@@ -61,6 +66,7 @@ function analyzeAndProcessImage(context, options) {
                  context.log(fileName + " metadata added successfully.");
             });
         });
+        return emotions;
     })
     .catch((error) => context.log(error))
     .finally(() => context.done());
