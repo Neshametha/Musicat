@@ -1,4 +1,4 @@
-.banner {
+body, html {
     grid-area: banner;
     height: 300px;
     display: flex;
@@ -13,14 +13,14 @@
     text-decoration: none;
   }
   
-  .banner-text img {
+  img {
     display: block;
     margin: 0 auto;
     width: 75%;
     text-decoration: none;
   }
   
-  .banner-text h1{
+  h1{
     font-size: 60pt;
     margin: 0;
     font-family: 'Black Han Sans', sans-serif;
