@@ -1,46 +1,58 @@
+<!DOCTYPE html>
+
 <html>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
-            crossorigin="anonymous">
-            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-            <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
-        <title>Musicat</title>
-    </head>
+  <html lang="en">
+  <head>
 
-    <style type="text/css">
-      #login, #loggedin {
-        display: none;
-      }
-      .text-overflow {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 500px;
-      }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" 
+      integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+    <link rel="stylesheet" type="text/css" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+    
+    <title>Musicat</title>
+  
+  </head>
 
-      body, html {
-        background: #FCF5A4;
-        color: #231f20;
-        font-family: 'Nunito', sans-serif;
-        grid-area: banner;
-        display: flex;
-        text-align: center;
-        text-decoration: none;
-      }
 
-  h1 {
-    font-size: 60pt;
+  <style type="text/css">
+
+    body, html {
+      display: flex;
+      grid-area: banner;
+      background: #FCF5A4;
+      font-family: 'Nunito', sans-serif;
+      font-size: 11pt;
+      color: #231f20;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .text-overflow {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    h1 {
+      font-size: 60pt;
+      margin: 0;
+      font-family: 'Black Han Sans', sans-serif;
+      text-decoration: none;
+    }
+  h2 {
+    font-size: 36pt;
     margin: 0;
     font-family: 'Black Han Sans', sans-serif;
     text-decoration: none;
@@ -77,14 +89,19 @@
     text-align: center;
     text-decoration: none;
   }
+
+  #login, #loggedin {
+      display: none;
+    }
+
     </style>
-  </head>
 
   <body>
     <div class="container" text-align="center">
       <div id="login">
-        <h1>Welcome to Musicat! Please login with your Spotify Credentials.</h1>
-          <img src="../src/assets/mikemura colored.png">
+        <h1>Welcome to Musicat!</h1>
+        <h2>Please login with your Spotify account.</h2>
+          <img src="https://66.media.tumblr.com/e6fe25e2c1e16ddc67191adb34294e4f/tumblr_pj4fkqAoFP1r4q2bmo1_500.png" height="400">
         <br><a href="/login" class="btn btn-primary">Log in with Spotify</a>
       </div>
       <div id="loggedin">
